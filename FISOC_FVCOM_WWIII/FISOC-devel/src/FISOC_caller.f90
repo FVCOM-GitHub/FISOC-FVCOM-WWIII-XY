@@ -31,11 +31,11 @@ PROGRAM FISOC_main
 
   ! initialize ESMF framework
 
-!  CALL ESMF_Initialize(defaultCalKind=ESMF_CALKIND_GREGORIAN, &
+  CALL ESMF_Initialize(defaultCalKind=ESMF_CALKIND_GREGORIAN, &
 !       defaultlogfilename="FISOC.log", &
 !       logkindflag=ESMF_LOGKIND_SINGLE, rc=rc)
 !       defaultlogfilename="ESMF_logs/FISOC.log", &
-  CALL ESMF_Initialize(defaultCalKind=ESMF_CALKIND_360DAY, &
+!  CALL ESMF_Initialize(defaultCalKind=ESMF_CALKIND_360DAY, &
        logkindflag=ESMF_LOGKIND_MULTI, rc=rc)
   IF (ESMF_LogFoundError(rcToCheck=rc, msg=ESMF_LOGERR_PASSTHRU, &
        line=__LINE__, file=__FILE__)) THEN
